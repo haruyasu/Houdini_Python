@@ -20,18 +20,27 @@ class ProjectManager(QtWidgets.QWidget):
 
         # Load UI File
         loader = QtUiTools.QUiLoader()
-        self.ui = loader.load('C:/Users/haruyasu/Documents/houdini16.0/scripts/python/projman/projman.ui')
+        self.ui = loader.load('C:/Users/haruyasu/Documents/houdini16.0/scripts/python/projman/projman_tab.ui')
 
         # get UI elements
-        self.setproj = self.ui.findChild(QtWidgets.QPushButton, "setproj")
-        self.newproj = self.ui.findChild(QtWidgets.QPushButton, "newproj")
-        self.newscene = self.ui.findChild(QtWidgets.QPushButton, "newscene")
-        self.incsave = self.ui.findChild(QtWidgets.QPushButton, "incsave")
-        self.reflist = self.ui.findChild(QtWidgets.QPushButton, "reflist")
-        self.projpath = self.ui.findChild(QtWidgets.QLabel, "projpath")
-        self.projname = self.ui.findChild(QtWidgets.QLabel, "projname")
-        self.scenelist = self.ui.findChild(QtWidgets.QListWidget, "scenelist")
+        # Tab 1
+        self.setproj = self.ui.findChild(QtWidgets.QPushButton, "setproj_2")
+        self.newproj = self.ui.findChild(QtWidgets.QPushButton, "newproj_2")
+        self.newscene = self.ui.findChild(QtWidgets.QPushButton, "newscene_2")
+        self.incsave = self.ui.findChild(QtWidgets.QPushButton, "incsave_2")
+        self.reflist = self.ui.findChild(QtWidgets.QPushButton, "reflist_2")
+        self.projpath = self.ui.findChild(QtWidgets.QLabel, "projpath_2")
+        self.projname = self.ui.findChild(QtWidgets.QLabel, "projname_2")
+        self.scenelist = self.ui.findChild(QtWidgets.QListWidget, "scenelist_2")
 
+        # Tab 2
+
+        # Tab 3
+        self.refbtn1 = self.ui.findChild(QtWidgets.QPushButton, "btn1")
+        self.refbtn2 = self.ui.findChild(QtWidgets.QPushButton, "btn2")
+        self.refbtn3 = self.ui.findChild(QtWidgets.QPushButton, "btn3")
+        self.refbtn4 = self.ui.findChild(QtWidgets.QPushButton, "btn4")
+        self.refbtn5 = self.ui.findChild(QtWidgets.QPushButton, "btn5")
 
         # create widgets
         # self.btn = QtWidgets.QPushButton("Click ME")
@@ -40,11 +49,22 @@ class ProjectManager(QtWidgets.QWidget):
         # self.listwidget = QtWidgets.QListWidget()
 
         # create connections
+        # Tab 1
         self.setproj.clicked.connect(self.setProject)
         self.newproj.clicked.connect(self.newProject)
         self.newscene.clicked.connect(self.newScene)
         self.incsave.clicked.connect(self.incSave)
         self.reflist.clicked.connect(self.refList)
+
+        # Tab 2
+
+        # Tab 3
+        self.refbtn1.clicked.connect(self.refBtn1)
+        # self.refbtn2.clicked.connect(self.refBtn2)
+        # self.refbtn3.clicked.connect(self.refBtn3)
+        # self.refbtn4.clicked.connect(self.refBtn4)
+        # self.refbtn5.clicked.connect(self.refBtn5)
+
 
         # layout
         mainLayout = QtWidgets.QVBoxLayout()
@@ -59,7 +79,7 @@ class ProjectManager(QtWidgets.QWidget):
 
         self.setLayout(mainLayout)
 
-
+    # Tab 1
     def setProject(self):
         try:
             setjob = hou.ui.selectFile(title="Set Project", file_type=hou.fileType.Directory)
@@ -95,8 +115,8 @@ class ProjectManager(QtWidgets.QWidget):
                 if not os.path.exists(dir_path):
                     os.mkdir(dir_path)
 
-            self.projname.setText(input_name[1])
-            self.scenelist.clear()
+                self.projname.setText(input_name[1])
+                self.scenelist.clear()
 
     def newScene(self):
         hou.hipFile.clear()
@@ -148,4 +168,13 @@ class ProjectManager(QtWidgets.QWidget):
                 self.scenelist.addItem(file)
 
         self.scenelist.doubleClicked.connect(self.openScene)
+
+    # Tab 2
+
+    # Tab 3
+    def refBtn1(self):
+        sticky = hou.node("/obj").createStickyNote()
+        sticky.setText("import hou\n"
+                       "geo = hou.node('/obj').createNode('geo', 'sphere',0)\n"
+                       "geo.createNode('sphere')")
 

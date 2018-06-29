@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>1228</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_8">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane { border: 0; }</string>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Project Manager</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="setproj_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+             <weight>9</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(210, 80, 76, 255), stop:0.477778 rgba(209, 129, 87, 255), stop:1 rgba(230, 84, 67, 255));
+
+font: 75 15pt;
+
+border: none;
+border-width: 5px;
+border-radius: 10px;
+
+color: rgb(255, 252, 238);</string>
+           </property>
+           <property name="text">
+            <string>Set Project...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="projpath_2">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+font: 11pt;</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="projname_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+             <weight>9</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+font: 75 15pt;</string>
+           </property>
+           <property name="text">
+            <string>Project name</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="scenelist_2">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 121, 26);
+font: 75 12pt;
+
+alternate-background-color: rgb(38, 38, 38);
+background-color: rgb(30, 30, 30);
+</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="newproj_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(210, 80, 76, 255), stop:0.477778 rgba(209, 129, 87, 255), stop:1 rgba(230, 84, 67, 255));
+
+font: 75 12pt;
+
+border: none;
+border-width: 5px;
+border-radius: 10px;
+
+color: rgb(255, 252, 238);</string>
+             </property>
+             <property name="text">
+              <string>New Folder...</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="newscene_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(210, 80, 76, 255), stop:0.477778 rgba(209, 129, 87, 255), stop:1 rgba(230, 84, 67, 255));
+
+font: 75 12pt;
+
+border: none;
+border-width: 5px;
+border-radius: 10px;
+
+color: rgb(255, 252, 238);</string>
+             </property>
+             <property name="text">
+              <string>New Scene...</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="leftMargin">
+            <number>5</number>
+           </property>
+           <property name="topMargin">
+            <number>5</number>
+           </property>
+           <property name="rightMargin">
+            <number>5</number>
+           </property>
+           <property name="bottomMargin">
+            <number>5</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="incsave_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(210, 80, 76, 255), stop:0.477778 rgba(209, 129, 87, 255), stop:1 rgba(230, 84, 67, 255));
+
+font: 75 12pt;
+
+border: none;
+border-width: 5px;
+border-radius: 10px;
+
+color: rgb(255, 252, 238);</string>
+             </property>
+             <property name="text">
+              <string>Incremental Save</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="reflist_2">
+             <property name="styleSheet">
+              <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(76, 153, 210, 255), stop:0.477778 rgba(87, 193, 209, 255), stop:1 rgba(67, 161, 230, 255));
+
+font: 75 12pt;
+
+border: none;
+border-width: 5px;
+border-radius: 10px;
+
+color: rgb(255, 252, 238);</string>
+             </property>
+             <property name="text">
+              <string>Refresh List</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+             <property name="autoRepeatInterval">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Tools</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="text">
+            <string>test</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>Reference</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="sticky">
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+font: 75 12pt;</string>
+           </property>
+           <property name="text">
+            <string>Create a new sticky note - Python Script</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn1">
+           <property name="text">
+            <string>ScriptName_1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn2">
+           <property name="text">
+            <string>ScriptName_2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn3">
+           <property name="text">
+            <string>ScriptName_3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn4">
+           <property name="text">
+            <string>ScriptName_4</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn5">
+           <property name="text">
+            <string>ScriptName_5</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
